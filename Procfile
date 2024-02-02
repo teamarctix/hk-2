@@ -1,0 +1,1 @@
+java -Dserver.port=$PORxT $JAVA_OPTS -jar build/libs/server-0.0.1-SNAPSHOT-plain.jar
