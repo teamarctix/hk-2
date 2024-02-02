@@ -20,10 +20,6 @@ repositories {
     mavenCentral()
 }
 
-springBoot {
-    buildInfo()
-}
-
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
@@ -44,4 +40,10 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = "com.xuqiuye.ServerApplicationKt"
+    }
 }
